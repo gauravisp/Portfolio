@@ -1,0 +1,579 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins%3Awght%40100%3B200%3B300%3B400%3B500%3B600&display=swap%27%29%3B");
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: black;
+    color: white;
+}
+
+header{
+    margin-top: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 9%;
+    background-color:transparent;
+    filter: drop-shadow(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo{
+    font-size: 3rem;
+    color:lightpink;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.logo:hover{
+    transform: scale(1.1);
+}
+
+nav a{
+    font-size: 1.8rem;
+    color: white;
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+nav a:hover,
+nav a.active{
+    color: lightpink;
+    border-bottom: 3px solid lightpink;
+}
+
+@media(max-width:995px){
+    nav{
+        position: absolute;
+        display: none;
+        top: 0;
+        right: 0;
+        width: 40%;
+        border-left: 3px solidlightpink;
+        border-bottom: 3px solid lightpink;
+        border-bottom-left-radius: 2rem;
+        padding: 1rem solid;
+        background-color: #161616;
+        border-top: 0.1rem solid rgba(0,0,0,0.1);
+    }
+
+    nav.active{
+        display: block;
+    }
+
+    nav a{
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+
+    nav a:hover,
+    nav a.active{
+        padding: 1rem;
+        border-radius: 0.5rem;
+        border-bottom: 0.5rem solid lightpink;
+    }
+}
+
+
+ 
+section{
+    min-height: 100vh;
+    padding: 5rem 9% 5rem;
+}
+
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+    background-color: black;
+}
+
+.home .home-content h1{
+    font-size: 6rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+span{
+    color: lightpink;
+}
+
+.home-content h3{
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.home-content p{
+    font-size: 1.6rem;
+}
+
+.home-img{
+    border-radius: 50%;
+}
+
+.home-img img{
+    position: relative;
+    width: 32vw;
+    border-radius: 50%;
+    box-shadow: 0 0 25px solid lightpink;
+    cursor: pointer;
+    transition: 0.2s linear;
+}
+
+.home-img img:hover{
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.social-icons a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background-color: transparent;
+    border: 0.2rem solid lightpink;
+    font-size: 2rem;
+    border-radius: 50%;
+    margin: 3rem 1.5rem 3rem 0;
+    transition: 0.3s ease;
+    color: lightpink;
+}
+
+.social-icons a:hover{
+    color: black;
+    transform: scale(1.3) translateY(-5px);
+    background-color: lightpink;
+    box-shadow: 0  0 25px lightpink;
+}
+
+
+.btn{
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background-color: black;
+    border-radius: 4rem;
+    font-size: 1.6rem;
+    color: lightpink;
+    letter-spacing: 0.3rem;
+    font-weight: 600;
+    border: 2px solid lightpink;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.btn:hover{
+    transform: scale3d(1.03);
+    background-color: lightpink;
+    color: black;
+    box-shadow: 0 0 25px lightpink;
+}
+
+.typing-text{
+    font-size: 34px;
+    font-weight: 600;
+    min-width: 280px;
+}
+
+.typing-text span{
+    position: relative;
+}
+
+.typing-text span::before{
+    content: "software Developer";
+    color: lightpink;
+    animation: words 20s infinite;
+}
+
+.typing-text span::after{
+    content: "";
+    background-color: black;
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 3px solid black;
+    right: -8;
+    animation: cursor 0.6s infinite;
+}
+
+@keyframes cursor{
+    to{
+        border-left: 3px solid lightpink;
+    }
+}
+
+@keyframes words{
+    0%, 20%{
+        content: "Web Developer";
+    }
+    21%, 40%{
+        content: "Choreographer";
+    }
+    41%, 60%{
+        content: "Graphic Designer";
+    }
+    61%, 80%{
+        content: "crocheter";
+    }
+    81%, 100%{
+        content: "photographer";
+    }
+}
+
+@media (max-width: 1000px){
+    .home{
+        gap: 4rem;
+    }
+}
+
+@media(max-width:995px){
+    .home{
+        flex-direction: column;
+        margin: 5rem 4rem;
+    }
+
+    .home .home-content h3{
+        font-size: 2.5rem;
+    }
+
+    .home-content h1{
+        font-size: 5rem;
+    }
+
+    .home-img img{
+        width: 70vw;
+        margin-top: 4rem;
+    }
+}
+
+ 
+/* Add this CSS to your style.css file */
+
+.services {
+    margin-top: 5rem;
+    text-align:center;
+    padding: 4rem 0;
+    grid-gap: 4rem;
+    text-decoration: pink;
+  }
+
+  
+  .services h2 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+  }
+  
+  .service-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    grid-gap: 4rem;
+    margin-top: 2rem;
+  }
+  
+  .service-card {
+    width: 30%;
+    padding: 2rem;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px pink ;
+    transition: transform 0.3s ease-in-out;
+    animation: fadeInUp 0.5s ease-in-out;
+  }
+  
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .service-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .service-card img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+  
+  .service-card h3 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .service-card p {
+    font-size: 1.2rem;
+  }
+.service-card h2{
+    color: pink;
+}
+
+
+
+
+.skills {
+    margin-top: 5rem;
+    text-align: center;
+    padding: 4rem 0;
+    grid-gap: 4rem;
+  }
+  
+  .skills h2 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+  }
+  
+  .skill-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    grid-gap: 4rem;
+    margin-top: 2rem;
+  }
+  
+  .skill-card {
+    width: 30%;
+    padding: 2rem;
+    border: 1px solid #ccc;
+    border-radius: 50%; /* Makes the cards circular */
+    box-shadow: 0 2px 5px pink;
+    transition: transform 0.3s ease-in-out;
+    animation: fadeInUp 0.5s ease-in-out;
+    text-align: center; /* Centers text inside the card */
+    overflow: hidden; /* Ensures content stays within the circle */
+  }
+  
+  .skill-card img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+    border-radius: 50%; /* Ensures the image is circular too */
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .skill-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .skill-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .skill-card p {
+    font-size: 1.2rem;
+  }
+  
+  .skill-card h2 {
+    color: pink;
+  }
+  
+  .experience {
+    margin-top: 40px;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .experience-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .experience-card {
+    background-color:lightpink;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    width: 45%;
+  }
+
+  .experience-card:hover{
+    transform: scale(1.05);
+  }
+  
+  .experience-card h3 {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .experience-card p {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .experience-card ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .experience-card ul li {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+
+
+
+
+  /* Overall section */
+.certificates {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: black; /* Light gray background */
+  border-radius: 10px;
+}
+
+/* Heading and paragraph */
+.certificates h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.certificates p {
+  font-size: 16px;
+  color:white;
+  margin-bottom: 20px;
+}
+
+/* Certificate cards */
+.certificate-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.certificate-card {
+  width: 450px; /* Adjust as needed */
+  padding: 20px;
+  background-color: lightpink;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.certificate-card:hover{
+  transform: scale(1.05);
+}
+
+.certificate-card h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.certificate-card p {
+  font-size: 14px;
+  color: black;
+}
+
+
+
+
+
+  .contact {
+    margin-top: 40px;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .contact-info {
+    margin-bottom: 20px;
+  }
+  
+  .contact-info ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .contact-info ul li {
+    margin-bottom: 5px;
+  }
+  
+  .contact-form {
+    background-color: lightpink;
+    border-radius: 10px;
+    padding: 20px;
+  }
+  
+  .contact-form label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .contact-form button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: black;
+    border: none;
+    cursor: pointer;
+  }
+
+
+  .menu-toggle {
+    display: none;
+    color: white;
+    font-size: 2.5rem;
+}
+
+@media (max-width: 995px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    nav {
+        display: none;
+    }
+
+    nav.active {
+        display: block;
+    }
+}
